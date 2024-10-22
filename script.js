@@ -9,10 +9,10 @@ const generatePassword = (length, options) => {
     
     // TODO: Create a variable for the character set based on selected options
     let characters = '';
-    if (options.includeUppercase) characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    if (options.includeLowercase) characters += 'abcdefghijklmnopqrstuvwxyz';
-    if (options.includeNumbers) characters += '0123456789';
-    if (options.includeSpecialChars) characters += '!@#$%^&*()';
+    if (options.includeUppercase) characters += uppercase;
+    if (options.includeLowercase) characters += lowercase;
+    if (options.includeNumbers) characters += numbers;
+    if (options.includeSpecialChars) characters += specialChars;
 
 // TODO: Generate the password based on the selected criteria
     let password = '';
