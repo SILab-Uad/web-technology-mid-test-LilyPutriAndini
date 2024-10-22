@@ -1,18 +1,16 @@
-// TODO: Implement the password generation logic based on user input
+function generatePassword(length, options) {
+    let characters = '';
+    if (options.includeUppercase) characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    if (options.includeLowercase) characters += 'abcdefghijklmnopqrstuvwxyz';
+    if (options.includeNumbers) characters += '0123456789';
+    if (options.includeSpecialChars) characters += '!@#$%^&*()_+[]{}|;:,.<>?';
 
-const generatePassword = (length, options) => {
-    // Character sets for password generation
-    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const lowercase = "abcdefghijklmnopqrstuvwxyz";
-    const numbers = "0123456789";
-    const specialChars = "!@#$%^&*()";
+    let password = '';
+    for (let i = 0; i < length; i++) {
+        password += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
 
-    // TODO: Create a variable for the character set based on selected options
-
-    // TODO: Generate the password based on the selected criteria
     return password;
-};
+}
 
-// TODO: Add event listener to the button to call generatePassword and display the output
-
-// BONUS: Implement the copy to clipboard functionality
+module.exports = { generatePassword };
