@@ -1,5 +1,11 @@
 // TODO: Implement the password generation logic based on user input
-function generatePassword(length, options) {
+
+const generatePassword = (length, options) => {
+    // Character sets for password generation
+    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowercase = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "0123456789";
+    const specialChars = "!@#$%^&*()";
     
     // TODO: Create a variable for the character set based on selected options
     let characters = '';
@@ -13,7 +19,8 @@ function generatePassword(length, options) {
     for (let i = 0; i < length; i++) {
         password += characters.charAt(Math.floor(Math.random() * characters.length));
     }
-// TODO: Add event listener to the button to call generatePassword and display the output
     return password;
 }
+// TODO: Add event listener to the button to call generatePassword and display the output
+
 // BONUS: Implement the copy to clipboard functionality
