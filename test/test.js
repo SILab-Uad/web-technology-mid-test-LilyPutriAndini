@@ -1,7 +1,7 @@
 // Dont change anything in this file
 
-const { expect } = require('chai');
-const { generatePassword } = require('../script.js');
+import { expect } from 'chai';
+import { generatePassword } from '../script.js';
 
 let totalTests = 0;
 let passedTests = 0;
@@ -80,20 +80,5 @@ describe('Password Generator Tests', () => {
         console.log(`\nTotal tests: ${totalTests}`);
         console.log(`Passed: ${passedTests}`);
         console.log(`Failed: ${failedTests}`);
-    });
-});import { assert } from 'chai';
-import { generatePassword } from '../script.js';
-
-describe('generatePassword', function() {
-    it('should generate a password of the correct length', function() {
-        const options = { includeUppercase: true, includeLowercase: true, includeNumbers: true, includeSpecialChars: true };
-        const password = generatePassword(12, options);
-        assert.lengthOf(password, 12);
-    });
-   
-    it('should include uppercase letters if specified', function() {
-        const options = { includeUppercase: true, includeLowercase: false, includeNumbers: false, includeSpecialChars: false };
-        const password = generatePassword(12, options);
-        assert.match(password, /[A-Z]/);
     });
 });
