@@ -81,8 +81,7 @@ describe('Password Generator Tests', () => {
         console.log(`Passed: ${passedTests}`);
         console.log(`Failed: ${failedTests}`);
     });
-});
-import { assert } from 'chai';
+});import { assert } from 'chai';
 import { generatePassword } from '../script.js';
 
 describe('generatePassword', function() {
