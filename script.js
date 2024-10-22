@@ -10,9 +10,6 @@ export const generatePassword = (length, options) => {
     if (options.includeNumbers) characterSet += numbers;
     if (options.includeSpecialChars) characterSet += specialChars;
 
-    if (characterSet === '') {
-        throw new Error('At least one character type must be selected.');
-    }
 
     let password = '';
     for (let i = 0; i < length; i++) {
